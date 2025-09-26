@@ -4,96 +4,106 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mapa Interativo da Jornada Consultiva</title>
-  <link rel="stylesheet" href="css/style.css">
+  <!-- TailwindCSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fonte exata (Poppins como exemplo, ajuste se precisar) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
 </head>
-<body>
+<body class="flex bg-gray-100 min-h-screen">
+
   <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2 class="sidebar-title">Mapa Interativo</h2>
-    <nav>
-      <ul>
-        <li><a href="#">Mapa Interativo</a></li>
-        <li><a href="#">Portais</a></li>
-        <li><a href="#">Mundos</a></li>
-        <li><a href="#">Gestão de Pessoas</a></li>
-        <li><a href="#">Evolução Comercial</a></li>
-        <li><a href="#">Quick Wins</a></li>
-        <li><a href="#">Módulos</a></li>
-        <li><a href="#">Configurações</a></li>
+  <aside class="w-64 bg-white border-r border-gray-200 flex flex-col p-6">
+    <h2 class="text-xl font-semibold text-gray-800 mb-6">Mapa Interativo</h2>
+    <nav class="flex-1">
+      <ul class="space-y-3 text-gray-700 font-medium">
+        <li><a href="#" class="hover:text-blue-600">Mapa Interativo</a></li>
+        <li><a href="#" class="hover:text-blue-600">Portais</a></li>
+        <li><a href="#" class="hover:text-blue-600">Mundos</a></li>
+        <li><a href="#" class="hover:text-blue-600">Gestão de Pessoas</a></li>
+        <li><a href="#" class="hover:text-blue-600">Evolução Comercial</a></li>
+        <li><a href="#" class="hover:text-blue-600">Quick Wins</a></li>
+        <li><a href="#" class="hover:text-blue-600">Módulos</a></li>
+        <li><a href="#" class="hover:text-blue-600">Configurações</a></li>
       </ul>
     </nav>
-    <button class="btn-primary">Iniciar Jornada</button>
+    <button class="mt-6 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+      Iniciar Jornada
+    </button>
   </aside>
 
-  <!-- Main content -->
-  <main>
-    <!-- Header -->
-    <header class="topbar">
-      <div class="buttons">
-        <button>Butto</button>
-        <button>Butto</button>
-        <button class="active">Mapa Interativo</button>
+  <!-- Main -->
+  <main class="flex-1 flex flex-col">
+    <!-- Topbar -->
+    <header class="flex justify-between items-center bg-blue-600 text-white px-6 py-3">
+      <div class="space-x-3">
+        <button class="bg-white text-blue-600 px-3 py-1 rounded hover:bg-gray-100">Butto</button>
+        <button class="bg-white text-blue-600 px-3 py-1 rounded hover:bg-gray-100">Butto</button>
+        <button class="bg-blue-800 px-3 py-1 rounded">Mapa Interativo</button>
       </div>
-      <div class="user-info">
-        <span class="user-name">Marina Oliveira</span>
-        <span class="user-role">Consultoria Senior</span>
-        <img src="https://i.pravatar.cc/40" alt="Avatar">
+      <div class="flex items-center gap-3">
+        <div class="text-right">
+          <p class="font-medium">Marina Oliveira</p>
+          <p class="text-sm opacity-80">Consultoria Senior</p>
+        </div>
+        <img src="https://i.pravatar.cc/40" class="w-10 h-10 rounded-full border-2 border-white" alt="Avatar">
       </div>
     </header>
 
-    <!-- Conteúdo principal -->
-    <section class="content">
-      <h1>Mapa Interativo da Jornada Consultiva</h1>
-      <p>Navegue pelos capítulos da jornada e descubra recursos para evolução comercial do cliente</p>
+    <!-- Conteúdo -->
+    <section class="p-8 flex-1 overflow-y-auto">
+      <h1 class="text-2xl font-semibold text-gray-800">Mapa Interativo da Jornada Consultiva</h1>
+      <p class="text-gray-600 mt-1">Navegue pelos capítulos da jornada e descubra recursos para evolução comercial do cliente</p>
 
-      <div class="map-container">
-        <img src="https://picsum.photos/600/400" alt="Mapa" class="map-img">
+      <!-- Mapa -->
+      <div class="relative mt-6 bg-gray-200 rounded-lg overflow-hidden">
+        <img src="https://picsum.photos/1000/500" alt="Mapa" class="w-full h-auto">
 
-        <!-- Capítulos -->
-        <div class="chapter c1">
-          <h3>Capítulo 1: O Despertar</h3>
-          <p>Clareza e Direção</p>
-          <a href="#" class="portal-link">Acessar Portal</a>
+        <!-- Capítulos (cards clicáveis) -->
+        <div class="absolute top-[20%] left-[15%] bg-white shadow-md border border-blue-600 rounded-lg p-3 w-48 hover:shadow-lg transition">
+          <h3 class="font-semibold text-sm">Capítulo 1: O Despertar</h3>
+          <p class="text-xs text-gray-600">Clareza e Direção</p>
+          <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">Acessar Portal</a>
         </div>
 
-        <div class="chapter c2">
-          <h3>Capítulo 2: A Base</h3>
-          <p>Fundamentos do Crescimento</p>
-          <a href="#" class="portal-link">Acessar Portal</a>
+        <div class="absolute top-[25%] left-[55%] bg-white shadow-md border border-blue-600 rounded-lg p-3 w-48 hover:shadow-lg transition">
+          <h3 class="font-semibold text-sm">Capítulo 2: A Base</h3>
+          <p class="text-xs text-gray-600">Fundamentos do Crescimento</p>
+          <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">Acessar Portal</a>
         </div>
 
-        <div class="chapter c3">
-          <h3>Capítulo 3: A Jornada do Cliente</h3>
-          <p>Estratégia</p>
-          <a href="#" class="portal-link">Acessar Portal</a>
+        <div class="absolute top-[45%] left-[25%] bg-white shadow-md border border-blue-600 rounded-lg p-3 w-48 hover:shadow-lg transition">
+          <h3 class="font-semibold text-sm">Capítulo 3: A Jornada do Cliente</h3>
+          <p class="text-xs text-gray-600">Estratégia</p>
+          <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">Acessar Portal</a>
         </div>
 
-        <div class="chapter c4">
-          <h3>Capítulo 4: O Campo de Batalha</h3>
-          <p>Performance</p>
-          <a href="#" class="portal-link">Acessar Portal</a>
+        <div class="absolute top-[50%] left-[55%] bg-white shadow-md border border-blue-600 rounded-lg p-3 w-48 hover:shadow-lg transition">
+          <h3 class="font-semibold text-sm">Capítulo 4: O Campo de Batalha</h3>
+          <p class="text-xs text-gray-600">Performance</p>
+          <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">Acessar Portal</a>
         </div>
 
-        <div class="chapter c5">
-          <h3>Capítulo 5: O Futuro Sustentável</h3>
-          <p>Gestão e Pessoas</p>
-          <a href="#" class="portal-link">Acessar Portal</a>
+        <div class="absolute top-[70%] left-[25%] bg-white shadow-md border border-blue-600 rounded-lg p-3 w-48 hover:shadow-lg transition">
+          <h3 class="font-semibold text-sm">Capítulo 5: O Futuro Sustentável</h3>
+          <p class="text-xs text-gray-600">Gestão e Pessoas</p>
+          <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">Acessar Portal</a>
         </div>
 
-        <div class="chapter c6">
-          <h3>Capítulo 6: O Legado</h3>
-          <p>Encerramento</p>
-          <a href="#" class="portal-link">Acessar Portal</a>
+        <div class="absolute top-[75%] left-[55%] bg-white shadow-md border border-blue-600 rounded-lg p-3 w-48 hover:shadow-lg transition">
+          <h3 class="font-semibold text-sm">Capítulo 6: O Legado</h3>
+          <p class="text-xs text-gray-600">Encerramento</p>
+          <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">Acessar Portal</a>
         </div>
       </div>
 
-      <div class="info-box">
-        <p>A Jornada não é linear. Cada capítulo funciona como um portal, de acordo com as prioridades do cliente.</p>
+      <!-- Info -->
+      <div class="mt-6 bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+        <p class="text-sm text-gray-700">A Jornada não é linear. Cada capítulo funciona como um portal, de acordo com as prioridades do cliente.</p>
       </div>
     </section>
   </main>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
-
