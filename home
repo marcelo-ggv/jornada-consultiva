@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Jornada Consultiva Galáctica</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000 100%);
+      color: white;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+
+    .mapa {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      height: 80vh;
+      padding: 20px;
+    }
+
+    .estacao {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #3a86ff, #8338ec);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .estacao:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #fff;
+    }
+
+    .bot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffbe0b;
+      color: #000;
+      border-radius: 20px;
+      padding: 15px;
+      max-width: 260px;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    .bot h3 {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Jornada Consultiva Galáctica</h1>
+  
+  <div class="mapa">
+    <div class="estacao">Estação 1<br>O Despertar</div>
+    <div class="estacao">Estação 2<br>A Base</div>
+    <div class="estacao">Estação 3<br>A Jornada</div>
+    <div class="estacao">Estação 4<br>O Campo</div>
+    <div class="estacao">Estação 5<br>O Futuro</div>
+    <div class="estacao">Estação 6<br>O Legado</div>
+  </div>
+
+  <div class="bot">
+    <h3>🤖 Comandante GGVito</h3>
+    <p>Bem-vindo à sua jornada consultiva!  
+    Clique em uma estação para iniciar.</p>
+  </div>
+</body>
+</html>
